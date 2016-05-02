@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.jakereinders.myfirstapp2.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to the RatingApp!"
+        android:id="@+id/lblWelcome"
+        android:textSize="25sp"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please Log In or Register"
+        android:id="@+id/lblWelcomeSub"
+        android:layout_below="@+id/lblWelcome"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/txtEmail"
+        android:hint="Email Address"
+        android:layout_below="@+id/lblWelcomeSub"
+        android:layout_alignLeft="@+id/lnkForgotPassword"
+        android:layout_alignStart="@+id/lnkForgotPassword"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/txtPassword"
+        android:hint="Password"
+        android:layout_below="@+id/txtEmail"
+        android:layout_alignLeft="@+id/txtEmail"
+        android:layout_alignStart="@+id/txtEmail"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Log In"
+        android:id="@+id/btnLogIn"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/txtPassword"
+        android:layout_centerHorizontal="true"
+        android:width="150dp"
+        android:background="@android:color/darker_gray"
+        android:onClick="clickLogin" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Need to Register? Click Here."
+        android:id="@+id/lnkRegister"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/btnLogIn"
+        android:layout_alignLeft="@+id/lnkForgotPassword"
+        android:layout_alignStart="@+id/lnkForgotPassword"
+        android:layout_centerHorizontal="true"
+        android:onClick="clickRegister" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forgotten Password? Click Here."
+        android:id="@+id/lnkForgotPassword"
+        android:layout_below="@+id/lnkRegister"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
+
+    <ImageView
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:src="@drawable/logo"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp" />
+</RelativeLayout>
